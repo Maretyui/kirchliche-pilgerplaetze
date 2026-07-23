@@ -13,6 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://kirchliche-pilgerplätze.de"),
   title: "Kirchliche Pilgerplätze",
   description:
     "Kirchliche Pilgerplätze vernetzt Pilgergruppen und kirchliche Gemeinschaften mit gastfreundlichen Gemeinden. Finden Sie Übernachtungs- und Rastmöglichkeiten auf Ihrem Pilgerweg.",
