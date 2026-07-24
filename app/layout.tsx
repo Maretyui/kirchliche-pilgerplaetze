@@ -17,6 +17,9 @@ export const metadata: Metadata = {
   title: "Kirchliche Pilgerplätze",
   description:
     "Kirchliche Pilgerplätze vernetzt Pilgergruppen und kirchliche Gemeinschaften mit gastfreundlichen Gemeinden. Finden Sie Übernachtungs- und Rastmöglichkeiten auf Ihrem Pilgerweg.",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "Kirchliche Pilgerplätze",
     description:
