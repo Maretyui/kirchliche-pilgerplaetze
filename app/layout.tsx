@@ -17,6 +17,14 @@ export const metadata: Metadata = {
   title: "Kirchliche Pilgerplätze",
   description:
     "Kirchliche Pilgerplätze vernetzt Pilgergruppen und kirchliche Gemeinschaften mit gastfreundlichen Gemeinden. Finden Sie Übernachtungs- und Rastmöglichkeiten auf Ihrem Pilgerweg.",
+  keywords: [
+    "Kirchliche Pilgerplätze",
+    "Pilgergruppen",
+    "Pilgerwege",
+    "Pilgerherberge",
+    "gastfreundliche Gemeinden",
+    "Übernachtung Pilgerweg",
+  ],
   alternates: {
     canonical: "/",
   },
