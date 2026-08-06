@@ -2,6 +2,8 @@
 
 Directory site for a network of church pilgrimage locations — built with [Next.js](https://nextjs.org).
 
+**Status:** placeholder landing page — the pilgrimage-location directory itself is still pending (see on-page copy).
+
 Live: https://kirchliche-pilgerplätze.de
 
 ## Stack
