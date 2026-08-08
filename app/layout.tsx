@@ -43,6 +43,9 @@ export const metadata: Metadata = {
     description:
       "Kirchliche Pilgerplätze vernetzt Pilgergruppen und kirchliche Gemeinschaften mit gastfreundlichen Gemeinden. Finden Sie Übernachtungs- und Rastmöglichkeiten auf Ihrem Pilgerweg.",
   },
+  formatDetection: {
+    telephone: false,
+  },
 };
 
 export const viewport: Viewport = {
