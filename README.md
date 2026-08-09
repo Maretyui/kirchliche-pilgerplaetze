@@ -11,6 +11,10 @@ Live: https://kirchliche-pilgerplätze.de
 - Next.js (App Router) + TypeScript
 - Tailwind CSS
 
+## Content
+
+The placeholder homepage copy lives in `app/page.tsx`; page title/description/OG metadata lives in `app/layout.tsx`. Update both once the pilgrimage-location directory feature is built.
+
 ## Getting Started
 
 Install dependencies and start the local dev server:
