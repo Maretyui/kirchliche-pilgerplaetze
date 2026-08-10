@@ -13,6 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  // The umlaut here doesn't need manual punycode-encoding: the URL
+  // constructor applies IDNA/punycode to the hostname automatically.
   metadataBase: new URL("https://kirchliche-pilgerplätze.de"),
   title: "Kirchliche Pilgerplätze",
   description:
