@@ -15,6 +15,8 @@ Live: https://kirchliche-pilgerplätze.de
 
 The placeholder homepage copy lives in `app/page.tsx`; page title/description/OG metadata lives in `app/layout.tsx`. Update both once the pilgrimage-location directory feature is built.
 
+`app/robots.ts` and `app/sitemap.ts` each hardcode the production URL (`https://kirchliche-pilgerplätze.de`) independently of `app/layout.tsx`'s `metadataBase` — keep all three in sync if the domain ever changes.
+
 ## Getting Started
 
 Install dependencies and start the local dev server:
