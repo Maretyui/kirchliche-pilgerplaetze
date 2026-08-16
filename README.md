@@ -13,7 +13,7 @@ Live: https://kirchliche-pilgerplätze.de
 
 ## Content
 
-The placeholder homepage copy lives in `app/page.tsx`; page title/description/OG metadata lives in `app/layout.tsx`. Update both once the pilgrimage-location directory feature is built.
+The placeholder homepage copy lives in `app/page.tsx`; page title/description/OG metadata lives in `app/layout.tsx`. Update both once the pilgrimage-location directory feature is built. `app/page.tsx` also renders a small "Design & Umsetzung" builder-credit footer linking to maretyui.com — keep it when the real directory content replaces the placeholder copy.
 
 `app/robots.ts` and `app/sitemap.ts` each hardcode the production URL (`https://kirchliche-pilgerplätze.de`) independently of `app/layout.tsx`'s `metadataBase` — keep all three in sync if the domain ever changes.
 
