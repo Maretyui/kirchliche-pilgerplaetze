@@ -21,6 +21,18 @@ export default function Home() {
           Diese Seite befindet sich im Aufbau.
         </p>
       </main>
+      <footer className="pb-6 text-center text-xs text-zinc-400 dark:text-zinc-500">
+        Design &amp; Umsetzung:{" "}
+        <a
+          href="https://maretyui.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline decoration-dotted underline-offset-2 hover:text-zinc-600 dark:hover:text-zinc-300"
+        >
+          Maik Reinhardt
+          <span className="sr-only"> (opens in a new tab)</span>
+        </a>
+      </footer>
     </div>
   );
 }
