@@ -27,7 +27,7 @@ export default function Home() {
           href="https://maretyui.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="underline decoration-dotted underline-offset-2 hover:text-zinc-600 dark:hover:text-zinc-300"
+          className="rounded-sm underline decoration-dotted underline-offset-2 hover:text-zinc-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:hover:text-zinc-300 dark:focus-visible:ring-zinc-500"
         >
           Maik Reinhardt
           <span className="sr-only"> (opens in a new tab)</span>
