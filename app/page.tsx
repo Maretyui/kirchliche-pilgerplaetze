@@ -21,7 +21,9 @@ export default function Home() {
           Diese Seite befindet sich im Aufbau.
         </p>
       </main>
-      <footer className="pb-6 text-center text-xs text-zinc-400 dark:text-zinc-500">
+      {/* zinc-500/zinc-400 (not -400/-500) to keep WCAG AA contrast (4.5:1)
+          against the page's zinc-50/black background in both color schemes. */}
+      <footer className="pb-6 text-center text-xs text-zinc-500 dark:text-zinc-400">
         Design &amp; Umsetzung:{" "}
         <a
           href="https://maretyui.com"
