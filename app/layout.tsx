@@ -51,6 +51,10 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
+  // Mirrors globals.css's `color-scheme: light dark` as an actual meta tag,
+  // so the browser can pick native UI colors (scrollbars, form controls)
+  // before the stylesheet has even loaded.
+  colorScheme: "light dark",
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "#ffffff" },
     { media: "(prefers-color-scheme: dark)", color: "#0a0a0a" },
