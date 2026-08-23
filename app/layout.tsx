@@ -12,13 +12,18 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// Kept as constants so the title/description can't drift out of sync
+// across the base, OpenGraph and Twitter metadata blocks below.
+const SITE_TITLE = "Kirchliche Pilgerplätze";
+const SITE_DESCRIPTION =
+  "Kirchliche Pilgerplätze vernetzt Pilgergruppen und kirchliche Gemeinschaften mit gastfreundlichen Gemeinden. Finden Sie Übernachtungs- und Rastmöglichkeiten auf Ihrem Pilgerweg.";
+
 export const metadata: Metadata = {
   // The umlaut here doesn't need manual punycode-encoding: the URL
   // constructor applies IDNA/punycode to the hostname automatically.
   metadataBase: new URL("https://kirchliche-pilgerplätze.de"),
-  title: "Kirchliche Pilgerplätze",
-  description:
-    "Kirchliche Pilgerplätze vernetzt Pilgergruppen und kirchliche Gemeinschaften mit gastfreundlichen Gemeinden. Finden Sie Übernachtungs- und Rastmöglichkeiten auf Ihrem Pilgerweg.",
+  title: SITE_TITLE,
+  description: SITE_DESCRIPTION,
   keywords: [
     "Kirchliche Pilgerplätze",
     "Pilgergruppen",
@@ -31,19 +36,17 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Kirchliche Pilgerplätze",
-    description:
-      "Kirchliche Pilgerplätze vernetzt Pilgergruppen und kirchliche Gemeinschaften mit gastfreundlichen Gemeinden. Finden Sie Übernachtungs- und Rastmöglichkeiten auf Ihrem Pilgerweg.",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
     url: "/",
-    siteName: "Kirchliche Pilgerplätze",
+    siteName: SITE_TITLE,
     type: "website",
     locale: "de_DE",
   },
   twitter: {
     card: "summary",
-    title: "Kirchliche Pilgerplätze",
-    description:
-      "Kirchliche Pilgerplätze vernetzt Pilgergruppen und kirchliche Gemeinschaften mit gastfreundlichen Gemeinden. Finden Sie Übernachtungs- und Rastmöglichkeiten auf Ihrem Pilgerweg.",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
   },
   formatDetection: {
     telephone: false,
