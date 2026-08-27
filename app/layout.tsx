@@ -64,6 +64,17 @@ export const viewport: Viewport = {
   ],
 };
 
+// Basic Organization structured data so search engines can associate the
+// site name/description/URL with an entity even before the real directory
+// content (with its own richer schema) replaces this placeholder page.
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: SITE_TITLE,
+  description: SITE_DESCRIPTION,
+  url: "https://kirchliche-pilgerplätze.de",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -74,7 +85,13 @@ export default function RootLayout({
       lang="de"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        {children}
+      </body>
     </html>
   );
 }
