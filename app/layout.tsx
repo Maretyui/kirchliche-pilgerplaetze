@@ -32,6 +32,8 @@ export const metadata: Metadata = {
     "gastfreundliche Gemeinden",
     "Übernachtung Pilgerweg",
   ],
+  authors: [{ name: "Maik Reinhardt", url: "https://maretyui.com" }],
+  creator: "Maik Reinhardt",
   alternates: {
     canonical: "/",
   },
