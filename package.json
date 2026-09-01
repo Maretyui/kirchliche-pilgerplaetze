@@ -2,6 +2,7 @@
   "name": "@maretyui/kirchliche-pilgerplaetze",
   "version": "1.0.0",
   "private": true,
+  "description": "Directory site for a network of church pilgrimage locations.",
   "author": "Maik Reinhardt",
   "scripts": {
     "dev": "next dev",
