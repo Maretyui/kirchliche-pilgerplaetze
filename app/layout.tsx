@@ -36,6 +36,7 @@ export const metadata: Metadata = {
   creator: "Maik Reinhardt",
   alternates: {
     canonical: "/",
+    languages: { "de-DE": "/" },
   },
   openGraph: {
     title: SITE_TITLE,
