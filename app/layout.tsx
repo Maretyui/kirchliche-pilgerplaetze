@@ -24,6 +24,10 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://kirchliche-pilgerplätze.de"),
   title: SITE_TITLE,
   description: SITE_DESCRIPTION,
+  // Used by browsers/OSes as the short display name when a user pins or
+  // bookmarks the page (e.g. "Add to Home Screen"), separate from the
+  // longer <title> text above.
+  applicationName: SITE_TITLE,
   keywords: [
     "Kirchliche Pilgerplätze",
     "Pilgergruppen",
