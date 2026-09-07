@@ -28,6 +28,11 @@ export const metadata: Metadata = {
   // bookmarks the page (e.g. "Add to Home Screen"), separate from the
   // longer <title> text above.
   applicationName: SITE_TITLE,
+  // iOS Safari ignores applicationName for "Add to Home Screen" pinning —
+  // it needs this dedicated field for the pinned title instead.
+  appleWebApp: {
+    title: SITE_TITLE,
+  },
   keywords: [
     "Kirchliche Pilgerplätze",
     "Pilgergruppen",
