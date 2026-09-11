@@ -1,4 +1,12 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+// Without its own metadata this page inherited the root layout's title
+// verbatim, so a mismatched/old link's browser tab read "Kirchliche
+// Pilgerplätze" with no hint anything had gone wrong.
+export const metadata: Metadata = {
+  title: "Seite nicht gefunden – Kirchliche Pilgerplätze",
+};
 
 // Next.js falls back to its own generic 404 UI without this file — this
 // keeps a mismatched/old link at least visually consistent with the
