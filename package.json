@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "description": "Directory site for a network of church pilgrimage locations.",
+  "homepage": "https://kirchliche-pilgerplätze.de",
   "author": "Maik Reinhardt",
   "scripts": {
     "dev": "next dev",
