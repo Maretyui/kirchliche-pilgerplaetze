@@ -36,6 +36,13 @@ body {
   outline-offset: 2px;
 }
 
+/* Use the page's own colors for text selection instead of the browser's
+   default blue, so it matches in both light and dark mode. */
+::selection {
+  background: var(--foreground);
+  color: var(--background);
+}
+
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;
