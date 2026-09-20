@@ -90,6 +90,8 @@ const jsonLd = {
   name: SITE_TITLE,
   description: SITE_DESCRIPTION,
   url: "https://kirchliche-pilgerplätze.de",
+  // Matches the de-DE `lang`/`alternates.languages` declared above.
+  inLanguage: "de-DE",
 };
 
 export default function RootLayout({
