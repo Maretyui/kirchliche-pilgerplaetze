@@ -13,6 +13,11 @@ export default function manifest(): MetadataRoute.Manifest {
       "Kirchliche Pilgerplätze vernetzt Pilgergruppen und kirchliche Gemeinschaften mit gastfreundlichen Gemeinden.",
     lang: "de",
     dir: "ltr",
+    // Explicit PWA identity, independent of `start_url` — without it, an
+    // install would be tied to whatever `start_url` happens to be right
+    // now, and get treated as a different app if that URL ever changes
+    // (e.g. once the real directory content replaces the placeholder copy).
+    id: "/",
     start_url: "/",
     display: "standalone",
     background_color: "#ffffff",
