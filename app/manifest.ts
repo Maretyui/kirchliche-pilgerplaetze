@@ -19,6 +19,11 @@ export default function manifest(): MetadataRoute.Manifest {
     // (e.g. once the real directory content replaces the placeholder copy).
     id: "/",
     start_url: "/",
+    // Explicit PWA navigation scope, independent of the default the
+    // browser infers from `start_url` — keeps the installed app's
+    // boundary pinned to "/" even if `start_url` ever moves once the
+    // real directory content replaces this placeholder.
+    scope: "/",
     display: "standalone",
     background_color: "#ffffff",
     theme_color: "#ffffff",
