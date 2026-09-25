@@ -6,6 +6,9 @@ import type { Metadata } from "next";
 // Pilgerplätze" with no hint anything had gone wrong.
 export const metadata: Metadata = {
   title: "Seite nicht gefunden – Kirchliche Pilgerplätze",
+  // Without this, the 404 page was eligible for indexing under its own
+  // URL — matching the pattern already used on sibling placeholder sites.
+  robots: { index: false, follow: true },
 };
 
 // Next.js falls back to its own generic 404 UI without this file — this
