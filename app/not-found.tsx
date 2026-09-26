@@ -40,19 +40,21 @@ export default function NotFound() {
       {/* zinc-500/zinc-400 (not -400/-500) to keep WCAG AA contrast (4.5:1)
           against the page's zinc-50/black background in both color schemes. */}
       <footer className="pb-6 text-center text-xs text-zinc-500 dark:text-zinc-400">
-        Design &amp; Umsetzung:{" "}
-        <a
-          href="https://maretyui.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="rounded-sm underline decoration-dotted underline-offset-2 hover:text-zinc-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:hover:text-zinc-300 dark:focus-visible:ring-zinc-500"
-        >
-          Maik Reinhardt
-          <span className="sr-only" lang="en">
-            {" "}
-            (opens in a new tab)
-          </span>
-        </a>
+        <address className="not-italic">
+          Design &amp; Umsetzung:{" "}
+          <a
+            href="https://maretyui.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-sm underline decoration-dotted underline-offset-2 hover:text-zinc-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:hover:text-zinc-300 dark:focus-visible:ring-zinc-500"
+          >
+            Maik Reinhardt
+            <span className="sr-only" lang="en">
+              {" "}
+              (opens in a new tab)
+            </span>
+          </a>
+        </address>
       </footer>
     </div>
   );
