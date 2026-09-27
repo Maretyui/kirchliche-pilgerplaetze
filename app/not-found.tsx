@@ -9,6 +9,12 @@ export const metadata: Metadata = {
   // Without this, the 404 page was eligible for indexing under its own
   // URL — matching the pattern already used on sibling placeholder sites.
   robots: { index: false, follow: true },
+  // Metadata objects are merged per top-level key, not deep-merged — without
+  // these, a shared link to this page unfurled with the homepage's full
+  // openGraph/twitter title, description and url instead of anything
+  // 404-specific, matching the fix already applied on ebs-abiball.
+  openGraph: { title: "Seite nicht gefunden – Kirchliche Pilgerplätze" },
+  twitter: { title: "Seite nicht gefunden – Kirchliche Pilgerplätze" },
 };
 
 // Next.js falls back to its own generic 404 UI without this file — this
