@@ -43,6 +43,9 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Maik Reinhardt", url: "https://maretyui.com" }],
   creator: "Maik Reinhardt",
+  // Matches manifest.ts's PWA-installer `categories` field with the
+  // equivalent classification for browsers/search engines.
+  category: "travel",
   alternates: {
     canonical: "/",
     languages: { "de-DE": "/" },
