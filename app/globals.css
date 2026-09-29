@@ -51,3 +51,12 @@ body {
     scroll-behavior: auto !important;
   }
 }
+
+@media (prefers-contrast: more) {
+  :focus-visible {
+    outline-width: 3px;
+  }
+  a {
+    text-decoration-thickness: 2px;
+  }
+}
