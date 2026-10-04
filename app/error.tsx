@@ -1,0 +1,61 @@
+"use client";
+
+import { useEffect } from "react";
+
+// Next.js falls back to its own generic error UI without this file — this
+// keeps a runtime error at least visually consistent with the homepage and
+// the not-found.tsx page instead of a blank default.
+export default function Error({
+  error,
+  reset,
+}: {
+  error: Error & { digest?: string };
+  reset: () => void;
+}) {
+  useEffect(() => {
+    console.error(error);
+  }, [error]);
+
+  return (
+    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
+      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-center gap-6 py-32 px-6 sm:px-16 bg-white text-center dark:bg-zinc-950">
+        <header>
+          <p className="text-sm font-medium uppercase tracking-[0.25em] text-zinc-500 dark:text-zinc-400">
+            Fehler
+          </p>
+          <h1 className="max-w-xl text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
+            Etwas ist schiefgelaufen
+          </h1>
+        </header>
+        <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
+          Bitte versuche es erneut oder kehre zur Startseite zurück.
+        </p>
+        <button
+          onClick={() => reset()}
+          className="rounded-sm text-sm text-zinc-500 underline decoration-dotted underline-offset-2 hover:text-zinc-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:text-zinc-400 dark:hover:text-zinc-300 dark:focus-visible:ring-zinc-500"
+        >
+          Erneut versuchen
+        </button>
+      </main>
+      {/* zinc-500/zinc-400 (not -400/-500) to keep WCAG AA contrast (4.5:1)
+          against the page's zinc-50/black background in both color schemes. */}
+      <footer className="pb-6 text-center text-xs text-zinc-500 dark:text-zinc-400">
+        <address className="not-italic">
+          Design &amp; Umsetzung:{" "}
+          <a
+            href="https://maretyui.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-sm underline decoration-dotted underline-offset-2 hover:text-zinc-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:hover:text-zinc-300 dark:focus-visible:ring-zinc-500"
+          >
+            Maik Reinhardt
+            <span className="sr-only" lang="en">
+              {" "}
+              (opens in a new tab)
+            </span>
+          </a>
+        </address>
+      </footer>
+    </div>
+  );
+}
