@@ -32,6 +32,10 @@ export const metadata: Metadata = {
   // it needs this dedicated field for the pinned title instead.
   appleWebApp: {
     title: SITE_TITLE,
+    // Matches the sibling placeholder sites (e.g. ju-jutsu) - without this,
+    // an installed PWA's status bar stays the plain default style instead
+    // of blending into the page chrome on iOS.
+    statusBarStyle: "default",
   },
   keywords: [
     "Kirchliche Pilgerplätze",
