@@ -39,6 +39,7 @@ export default function GlobalError({
           Bitte lade die Seite erneut oder versuche es später noch einmal.
         </p>
         <button
+          type="button"
           onClick={() => reset()}
           className="rounded-sm text-sm text-zinc-500 underline decoration-dotted underline-offset-2 hover:text-zinc-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:text-zinc-400 dark:hover:text-zinc-300 dark:focus-visible:ring-zinc-500"
         >
