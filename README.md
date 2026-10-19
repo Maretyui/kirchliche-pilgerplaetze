@@ -25,6 +25,8 @@ The placeholder homepage copy lives in `app/page.tsx`; page title/description/OG
 
 `app/opengraph-image.tsx` generates the 1200x630 share image used by `layout.tsx`'s `openGraph`/`twitter` metadata — without it, links shared in group chats/Discord would unfurl with no image at all. Update its copy alongside `SITE_TITLE`/`SITE_DESCRIPTION` if the directory content changes.
 
+`app/icon.tsx` and `app/apple-icon.tsx` are file-convention routes that generate a crisp 32x32 tab icon and a 180x180 iOS home-screen icon respectively, sharing the same dark background and "KP" mark as `app/opengraph-image.tsx` — `favicon.ico` alone would otherwise be the only icon Chromium/Android/iOS fall back to.
+
 `app/not-found.tsx` and `app/error.tsx` replace Next's generic fallback UI for a 404 and a runtime error respectively, keeping both visually consistent with the homepage instead of a blank default; the 404 page also sets its own title/`robots: noindex`/OG/Twitter metadata so a stale or mistyped link doesn't unfurl or get indexed under the homepage's own title. `app/global-error.tsx` covers the one case neither of those reaches — a failure while rendering `app/layout.tsx` itself (e.g. the font loader) — so it has to recreate the `<html>`/`<body>` shell and font variables `layout.tsx` normally provides.
 
 ## Accessibility
