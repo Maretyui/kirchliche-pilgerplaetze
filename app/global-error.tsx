@@ -38,13 +38,25 @@ export default function GlobalError({
         <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
           Bitte lade die Seite erneut oder versuche es später noch einmal.
         </p>
-        <button
-          type="button"
-          onClick={() => reset()}
-          className="rounded-sm text-sm text-zinc-500 underline decoration-dotted underline-offset-2 hover:text-zinc-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:text-zinc-400 dark:hover:text-zinc-300 dark:focus-visible:ring-zinc-500"
-        >
-          Erneut versuchen
-        </button>
+        <div className="flex flex-col sm:flex-row gap-4">
+          <button
+            type="button"
+            onClick={() => reset()}
+            className="rounded-sm text-sm text-zinc-500 underline decoration-dotted underline-offset-2 hover:text-zinc-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:text-zinc-400 dark:hover:text-zinc-300 dark:focus-visible:ring-zinc-500"
+          >
+            Erneut versuchen
+          </button>
+          {/* A plain <a>, not next/link's Link — the app router state Link
+              depends on is exactly what may have failed to initialize here,
+              since this boundary only fires when app/layout.tsx itself
+              throws (e.g. the font loader). */}
+          <a
+            href="/"
+            className="rounded-sm text-sm text-zinc-500 underline decoration-dotted underline-offset-2 hover:text-zinc-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:text-zinc-400 dark:hover:text-zinc-300 dark:focus-visible:ring-zinc-500"
+          >
+            Zurück zur Startseite
+          </a>
+        </div>
       </body>
     </html>
   );
