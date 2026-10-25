@@ -35,6 +35,28 @@ export default function manifest(): MetadataRoute.Manifest {
         sizes: "any",
         type: "image/x-icon",
       },
+      // Backs icon.tsx's generated PNG — Chrome's install-prompt criteria
+      // need a real raster icon at 192x192 or larger, which the .ico above
+      // alone doesn't satisfy.
+      {
+        src: "/icon",
+        sizes: "512x512",
+        type: "image/png",
+        purpose: "any",
+      },
+      // Separate entry (not combined into the one above - this manifest
+      // type only accepts a single purpose value per icon) so Android's
+      // adaptive-icon system can mask it into a circle/squircle/rounded
+      // square per device instead of letterboxing it, matching the fix
+      // already applied on ebs-abiball/ju-jutsu. Safe to reuse the same
+      // icon.tsx PNG as-is since its "KP" mark is centered well inside the
+      // ~80%-diameter safe zone maskable icons are cropped to.
+      {
+        src: "/icon",
+        sizes: "512x512",
+        type: "image/png",
+        purpose: "maskable",
+      },
     ],
   };
 }
