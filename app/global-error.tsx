@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -25,6 +26,16 @@ export default function GlobalError({
   error: Error & { digest?: string };
   reset: () => void;
 }) {
+  const headingRef = useRef<HTMLHeadingElement>(null);
+
+  // Mirrors error.tsx: this boundary swaps in the whole document without a
+  // route change or title update, so there's no normal cue for assistive
+  // tech that something happened — move focus to the heading so it gets
+  // announced.
+  useEffect(() => {
+    headingRef.current?.focus();
+  }, []);
+
   return (
     <html
       lang="de"
@@ -32,7 +43,12 @@ export default function GlobalError({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col items-center justify-center gap-6 bg-zinc-50 text-center font-sans dark:bg-black">
-        <h1 className="max-w-xl text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
+        <h1
+          ref={headingRef}
+          tabIndex={-1}
+          role="alert"
+          className="max-w-xl text-3xl font-semibold leading-10 tracking-tight text-black outline-none dark:text-zinc-50"
+        >
           Etwas ist schiefgelaufen
         </h1>
         <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
