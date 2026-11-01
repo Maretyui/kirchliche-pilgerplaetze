@@ -60,3 +60,19 @@ body {
     text-decoration-thickness: 2px;
   }
 }
+
+/* Windows High Contrast Mode (and other forced-colors UAs) replaces the
+   page's own palette with a user-chosen system one. Pin the focus ring
+   and selection highlight to the matching system color keywords so both
+   stay visible under forced colors instead of depending on this page's
+   --foreground value, which forced-colors mode may not carry over to
+   every property. */
+@media (forced-colors: active) {
+  :focus-visible {
+    outline-color: CanvasText;
+  }
+  ::selection {
+    background: Highlight;
+    color: HighlightText;
+  }
+}
